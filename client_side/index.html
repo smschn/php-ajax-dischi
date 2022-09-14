@@ -10,7 +10,9 @@
 <body>
 
     <div id="app">
-        test
+        <ul>
+            <li v-for="album in albums">{{ album.title }}</li>
+        </ul>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

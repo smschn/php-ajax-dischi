@@ -1,9 +1,12 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'ciaone'
+        albums: []
     },
     mounted() {
-        console.log(this.message);
+        axios.get('http://localhost/progetti_php/45/php-ajax-dischi/client_side/api.php')
+        .then( response => {
+            this.albums.push(response.data);
+        });
     }
 })
