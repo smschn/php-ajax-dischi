@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bgc: #2e3a46;
+}
+
 header {
     height: 80px;
-    background-color: #2e3a46;
+    background-color: var(--bgc);
 }
 
 header img {
@@ -33,6 +37,8 @@ main .card {
     text-align: center;
     margin: 40px;
     color: #fff;
+    background-color: var(--bgc);
+    padding: 20px;
 }
 
 main .card img {
