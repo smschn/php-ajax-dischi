@@ -9,10 +9,22 @@
 </head>
 <body>
 
+    <header>
+        <img src="../img/spotify_logo.png" alt="Logo">
+    </header>
+
     <div id="app">
-        <ul>
-            <li v-for="album in albums">{{album.title}}, {{album.author}}, {{album.year}}, {{album.poster}}, {{album.genre}}</li>
-        </ul>
+        <main>
+            <div class="container">
+                <div class="card" v-for="album in albums">
+                    <img v-bind:src="album.poster" :alt="album.title">
+                    <h3>{{album.title}}</h3>
+                    <h4>{{album.author}}</h4>
+                    <h5>{{album.year}}</h5>
+                    <p>{{album.genre}}</p>
+                </div>
+            </div>
+        </main>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

@@ -3,3 +3,38 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    height: 80px;
+    background-color: #2e3a46;
+}
+
+header img {
+    width: 60px;
+    float: left;
+    margin: 10px;
+}
+
+main {
+    padding: 100px 0;
+    background-color: #1e2d3b;
+    height: calc(100vh - 80px);
+}
+
+main .container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .card {
+    flex-basis: calc(100% / 3 - 80px);
+    text-align: center;
+    margin: 40px;
+    color: #fff;
+}
+
+main .card img {
+    max-width: 40%;
+}
