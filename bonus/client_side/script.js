@@ -10,7 +10,7 @@ var app = new Vue({
     },
     methods: {
         getAlbums() {
-            axios.get('http://localhost/progetti_php/45/php-ajax-dischi/client_side/api.php' + '?genre=' + this.selectedGenre)
+            axios.get('http://localhost/progetti_php/45/php-ajax-dischi/bonus/client_side/api.php' + '?genre=' + this.selectedGenre)
             .then( response => {
                 this.albums = response.data;
                 if (this.genres.length == 0) {
