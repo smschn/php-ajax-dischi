@@ -11,11 +11,16 @@
 header {
     height: 80px;
     background-color: var(--bgc);
+    display: flex;
+    justify-content: space-between;
 }
 
 header img {
     width: 60px;
-    float: left;
+    margin: 10px;
+}
+
+header select {
     margin: 10px;
 }
 

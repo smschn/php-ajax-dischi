@@ -9,11 +9,16 @@
 </head>
 <body>
 
-    <header>
-        <img src="../img/spotify_logo.png" alt="Logo">
-    </header>
-
     <div id="app">
+
+        <header>
+            <img src="../img/spotify_logo.png" alt="Logo">
+            <select v-model="selectedGenre" @change="getAlbums">
+                <option value="default" selected>Seleziona un genere</option>
+                <option v-for="genre in genres" v-bind:value="genre">{{genre}}</option>
+            </select>
+        </header>
+
         <main>
             <div class="container">
                 <div class="card" v-for="album in albums">
@@ -25,6 +30,7 @@
                 </div>
             </div>
         </main>
+
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
